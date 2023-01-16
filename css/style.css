@@ -2,6 +2,9 @@
   font-family: "Rubik", sans-serif;
   margin: 0;
 }
+*:focus {
+  outline: none;
+}
 
 h1 {
   color: white;
@@ -24,10 +27,21 @@ body {
   display: flex;
   justify-content: center;
 }
+@media screen and (min-width: 950px) {
+  .background {
+    height: 31%;
+  }
+}
 
 #map {
   height: 65%;
   width: 100%;
+  z-index: 0;
+}
+@media screen and (min-width: 950px) {
+  #map {
+    height: 69%;
+  }
 }
 
 .main {
@@ -35,5 +49,132 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1.5rem;
+  padding: 1.5em;
+  width: 90%;
+  z-index: 2;
+}
+@media screen and (min-width: 950px) {
+  .main {
+    width: 77%;
+  }
+}
+
+.search-field {
+  display: flex;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+@media screen and (min-width: 950px) {
+  .search-field {
+    width: 50%;
+  }
+}
+
+.input {
+  padding: 1em;
+  border: none;
+  width: 82.2%;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 1rem 0 0 1rem;
+}
+.input :focus {
+  outline: none;
+}
+@media screen and (min-width: 950px) {
+  .input {
+    width: 90%;
+  }
+}
+
+::-moz-placeholder {
+  color: hsl(0deg, 0%, 59%);
+}
+
+:-ms-input-placeholder {
+  color: hsl(0deg, 0%, 59%);
+}
+
+::placeholder {
+  color: hsl(0deg, 0%, 59%);
+}
+
+.btn-submit {
+  width: 17.8%;
+  border: none;
+  background-color: hsl(0deg, 0%, 17%);
+  border-radius: 0 1rem 1rem 0;
+}
+@media screen and (min-width: 950px) {
+  .btn-submit {
+    width: 10%;
+  }
+}
+
+button :hover {
+  cursor: pointer;
+}
+
+.result-box {
+  background-color: white;
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 1em 0;
+}
+@media screen and (min-width: 950px) {
+  .result-box {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2.875rem;
+    padding: 2em 0.7em;
+    align-items: stretch;
+  }
+}
+
+.box-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.7em;
+}
+@media screen and (min-width: 950px) {
+  .box-column {
+    align-items: stretch;
+    flex: 1;
+    padding: 0 2em;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .box-column + .box-column {
+    border-left: solid 1px hsla(0deg, 0%, 0%, 0.15);
+  }
+}
+
+span {
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 59%);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.091rem;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 950px) {
+  span {
+    font-size: 0.75rem;
+  }
+}
+
+p {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 950px) {
+  p {
+    font-size: 1.625rem;
+  }
 }/*# sourceMappingURL=style.css.map */

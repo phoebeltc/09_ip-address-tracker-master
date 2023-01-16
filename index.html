@@ -35,17 +35,30 @@
 
       <h1 role="title">IP Address Tracker</h1>
   
-      <form role="serach-field">
-        <input type="text" placeholder="Search for any IP address or domain">
-        <input type="submit">
+      <form role="serach-field" class="search-field">
+        <input type="text" placeholder="Search for any IP address or domain" class="input">
+        <button type="submit" class="btn-submit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+        </button> 
       </form>
     
-      <div role="result-box">
-      IP Address
-      Location
-      Timezone
-        UTC <!-- add offset value dynamically using the API -->
-      ISP
+      <div role="result-box" class="result-box">
+        <div role="column" class="box-column">
+          <span>IP Address</span>
+          <p>192.212.174.101</p>
+        </div>
+        <div role="column" class="box-column">
+          <span>Location</span>
+          <p>Brooklyn, NY 10001</p>
+        </div>
+        <div role="column" class="box-column">
+          <span>Timezone</span>
+          <p>UTC -05:00</p>
+        </div>
+        <div role="column" class="box-column">
+          <span>ISP</span>
+          <p>SpaceX Starlink</p>
+        </div>
       </div>
   
     </div>
