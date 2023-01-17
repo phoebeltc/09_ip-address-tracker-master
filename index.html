@@ -36,8 +36,8 @@
       <h1 role="title">IP Address Tracker</h1>
   
       <form role="serach-field" class="search-field">
-        <input type="text" placeholder="Search for any IP address or domain" class="input">
-        <button type="submit" class="btn-submit">
+        <input type="text" placeholder="Search for any IP address or domain" class="input" id="searchInput">
+        <button type="submit" class="btn-submit" id="btnSubmit">
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
         </button> 
       </form>
@@ -45,19 +45,19 @@
       <div role="result-box" class="result-box">
         <div role="column" class="box-column">
           <span>IP Address</span>
-          <p>192.212.174.101</p>
+          <p id="ipAddress">192.212.174.101</p>
         </div>
         <div role="column" class="box-column">
           <span>Location</span>
-          <p>Brooklyn, NY 10001</p>
+          <p id="location">Brooklyn, NY 10001</p>
         </div>
         <div role="column" class="box-column">
           <span>Timezone</span>
-          <p>UTC -05:00</p>
+          <p id="timezone">UTC -05:00</p>
         </div>
         <div role="column" class="box-column">
           <span>ISP</span>
-          <p>SpaceX Starlink</p>
+          <p id="isp">SpaceX Starlink</p>
         </div>
       </div>
   
@@ -69,29 +69,12 @@
 
   </div>
   
-  
   <!-- <div class="attribution" role="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
 
-  <script>
-
-    const map = L.map('map').setView([51.505, -0.09], 13);
-  
-    // const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    //   maxZoom: 19,
-    //   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    // }).addTo(map);
-
-    googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
-    maxZoom: 20,
-    subdomains:['mt0','mt1','mt2','mt3']
-    });
-
-    googleStreets.addTo(map);
-  
-  </script>
+  <script src="./index.js"></script>
   
 </body>
 </html>
