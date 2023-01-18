@@ -6,7 +6,19 @@ const timezone = document.querySelector('#timezone');
 const isp = document.querySelector('#isp'); 
 
 
-const map = L.map('map').setView([51.505, -0.09], 13);
+const map = L.map('map');
+
+    const setMap = (lat, lng) => {
+        map.setView([lat, lng], 13);
+
+        const locationIcon = L.icon({
+            iconUrl: './images/icon-location.svg', 
+            iconSize: [45, 55],
+            iconAnchor: [20, 20],
+            })
+
+        L.marker([lat, lng], {icon: locationIcon}).addTo(map);
+    }
 
     googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
     maxZoom: 20,
@@ -14,6 +26,7 @@ const map = L.map('map').setView([51.505, -0.09], 13);
     });
 
     googleStreets.addTo(map);
+    
 
 
 const setData = (data) => {
@@ -22,9 +35,10 @@ const setData = (data) => {
     timezone.innerText = `UTC ${data.location.timezone}`; 
     isp.innerText = data.isp; 
 
-    const lag = data.location.lag; 
+    const lat = data.location.lat; 
     const lng = data.location.lng; 
 
+    setMap(lat,lng);
 }
 
 
@@ -45,4 +59,5 @@ window.addEventListener('load', () => {
 
 btnSubmit.addEventListener('click', () => {
     if (searchInput.value) getApiResult(searchInput.value);
+    console.log(searchInput.value);
 })

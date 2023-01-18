@@ -107,10 +107,8 @@ body {
     @media screen and (min-width: $breakpoint-tablet) {
         width: 10%;
     }
-}
 
-button {
-    & :hover {
+    &:hover {
         cursor: pointer;
     }
 }

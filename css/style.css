@@ -110,8 +110,7 @@ body {
     width: 10%;
   }
 }
-
-button :hover {
+.btn-submit:hover {
   cursor: pointer;
 }
 
